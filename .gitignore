@@ -6,3 +6,7 @@ proposals/
 
 # Obsidian per-machine UI state
 .obsidian/workspace.json
+
+# macOS / local
+.DS_Store
+.worktrees/

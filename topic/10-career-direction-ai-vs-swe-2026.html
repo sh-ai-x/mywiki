@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Career Direction — AI Engineering vs. Generalist SWE (2026)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5b5b5b;
+    --line: #d9d9d9;
+    --accent: #0a5b8a;
+    --warn-bg: #fdf3e7;
+    --warn-line: #e0a869;
+    --ok-bg: #eef5ee;
+    --ok-line: #7fae7f;
+    --box-bg: #f4f6f8;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 10.5pt; }
+  body {
+    font-family: "Charter", "Georgia", "Times New Roman", serif;
+    color: var(--ink);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 28px 60px; }
+  h1 { font-size: 20pt; line-height: 1.2; margin: 0 0 4px; }
+  h2 {
+    font-size: 13.5pt;
+    margin: 26px 0 8px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--ink);
+  }
+  h3 { font-size: 11.5pt; margin: 16px 0 4px; color: var(--accent); }
+  p { margin: 6px 0; }
+  ul, ol { margin: 6px 0 6px 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  strong { font-weight: 700; }
+  code {
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 8.8pt;
+    background: #eee;
+    padding: 0.5px 3px;
+    border-radius: 2px;
+  }
+  .sub { color: var(--muted); font-size: 9.5pt; margin-top: 2px; }
+  .box {
+    background: var(--box-bg);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    margin: 14px 0;
+    border-radius: 2px;
+  }
+  .box.warn { background: var(--warn-bg); border-left-color: var(--warn-line); }
+  .box.ok   { background: var(--ok-bg);   border-left-color: var(--ok-line); }
+  .box h3 { margin-top: 0; color: var(--ink); }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 9.3pt; }
+  th, td { border: 1px solid var(--line); padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #efefef; font-weight: 700; }
+  .verdict { font-size: 9.5pt; color: var(--muted); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 22px 0; }
+  .foot { color: var(--muted); font-size: 8.6pt; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 8px; }
+  @page { size: A4; margin: 16mm 15mm; }
+  @media print {
+    main { max-width: none; padding: 0; }
+    h2 { break-after: avoid; }
+    h3 { break-after: avoid; }
+    .box, table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Career Direction: AI Engineering vs. Generalist SWE</h1>
+<p class="sub">Re-coaching · 2026-09-10 · context: actively building <code>sh-ai-x/AgentOpsPipeline</code> · supersedes <code>topic/00-career-strategy.md</code> where they conflict</p>
+
+<div class="box">
+  <h3>Decision in one paragraph</h3>
+  <p>Your instinct that generalist backend/frontend roles are weakening is <strong>directionally right but dangerous if it makes you abandon fundamentals</strong>. The work that shrinks is <em>producing code</em>. The work that grows is <em>owning systems</em> — designing, evaluating, securing, and being accountable for them, including AI systems. Keep the primary target: <strong>backend engineer for AI/agent systems, with security &amp; evaluation as the specialization</strong>. AgentOpsPipeline is the right project for that story. Its one blocking problem is the <strong>0% task-success headline</strong> — fix that with a re-run before you show it, then <strong>stop building and start applying</strong>.</p>
+</div>
+
+<h2>1. Your thesis, examined</h2>
+
+<p>Claim: <em>"As AI advances, backend and frontend jobs shrink and those positions lose ground."</em></p>
+
+<h3>Where it holds</h3>
+<ul>
+  <li><strong>Entry-level generalist work is compressing.</strong> CRUD endpoints, boilerplate React, simple API glue, first-draft tests — this is the slice most exposed to AI coding tools, and it is exactly the slice junior hiring used to absorb. The bottom rung is narrower than it was in 2022.</li>
+  <li><strong>"Can produce working code" is no longer a differentiator.</strong> A model does that now. The market pays for what the model can't be trusted to do alone.</li>
+  <li><strong>Team leverage changed.</strong> Teams that would have hired 3 juniors now hire 1 mid-level who supervises AI output. Fewer seats, higher bar per seat.</li>
+</ul>
+
+<h3>Where it's a trap</h3>
+<ul>
+  <li><strong>It quietly argues for learning <em>less</em>.</strong> "No point going deep on backend" is the wrong conclusion. Supervising AI output requires <em>more</em> systems understanding, not less — you now have to review, debug, and take responsibility for code you didn't write.</li>
+  <li><strong>It assumes "AI engineer" is an escape hatch.</strong> It isn't a separate, easier ladder. Agent/AI-engineer roles typically want backend depth <em>plus</em> ML literacy <em>plus</em> evaluation skill — a wider bar, not a lower one. (Your own vault notes already flag this; it's still true.)</li>
+  <li><strong>Total software demand is not obviously falling.</strong> The shift is up the stack: from "write the feature" to "make the system observable, recoverable, safe, and measured." That's a re-pricing of skills, not a headcount collapse — and nobody has credible five-year numbers either way.</li>
+</ul>
+
+<div class="box ok">
+  <h3>The robust reading</h3>
+  <p>Don't bet on "AI hiring beats backend hiring." Bet on the profile that wins in <em>every</em> scenario: <strong>deep systems fundamentals + ability to supervise AI + one real specialization (security / evaluation)</strong>. If AI-engineer hiring booms, you're in it. If it corrects, you're still a strong backend/platform engineer. That hedge is the whole strategy.</p>
+</div>
+
+<h2>2. What's actually happening to SWE hiring (2026)</h2>
+
+<table>
+  <tr><th>Layer of work</th><th>Trajectory</th><th>Why</th></tr>
+  <tr><td>Boilerplate feature code, simple frontend, glue scripts</td><td>Shrinking</td><td>Directly automatable; low judgment content</td></tr>
+  <tr><td>API / service design, data modeling, integration contracts</td><td>Flat to up</td><td>Needs a human accountable for the interface and its failure modes</td></tr>
+  <tr><td>Distributed-systems concerns: queues, idempotency, delivery semantics, checkpointing, recovery</td><td>Up</td><td>AI makes these <em>harder</em> — more non-deterministic components to keep consistent</td></tr>
+  <tr><td>Observability, evaluation, incident analysis</td><td>Up sharply</td><td>You can't ship what you can't measure; agents fail in new ways</td></tr>
+  <tr><td>Security of AI systems: tool authorization, injection defense, approval gating</td><td>Up sharply</td><td>New attack surface, few people who can speak to it credibly</td></tr>
+</table>
+
+<p>Every "up" row is something <strong>AgentOpsPipeline already touches</strong>. That is not an accident — it's the reason the project is the right vehicle.</p>
+
+<h2>3. The role that's hard to displace</h2>
+
+<p>Frame yourself as: <strong>a backend engineer for AI systems</strong> — the person who makes agents observable, testable, recoverable, and safe to operate under real tool-use and injection risk.</p>
+
+<p>Why this specific framing survives AI progress:</p>
+<ul>
+  <li>It's defined by <strong>judgment and accountability</strong>, not code volume. "Which workflow do we ship, and what's the evidence?" is not a model's decision.</li>
+  <li>It sits on <strong>durable fundamentals</strong> — Postgres, job queues, exactly-once vs. at-least-once, checkpoint/resume, OTel — that don't churn with model releases.</li>
+  <li>The <strong>security layer</strong> (identity from auth not the model, approval binding, idempotent ledgers, injection tests) is a credibility multiplier that few junior candidates can demonstrate at all.</li>
+</ul>
+
+<h2>4. AgentOpsPipeline — critical review</h2>
+
+<h3>What's genuinely strong</h3>
+<ul>
+  <li><strong>It's a real system, not a demo.</strong> FastAPI + Postgres + worker + checkpointing + Alembic + Docker Compose + ~138 tests + offline CI. Most portfolio "agent" projects are a Streamlit script over LangChain with no persistence and no tests. This clears that bar decisively.</li>
+  <li><strong>The measurement design is defensible.</strong> Matched-budget topology comparison, frozen content-hashed held-out set, multi-axis scorecard (task success / retrieval recall / tool correctness / reliability / cost), pre-registered suppositions. This is the part that reads as "engineer," not "tutorial-follower."</li>
+  <li><strong>The safety model is coherent.</strong> JWT principal drives identity, approval binds user+run+tool+args+nonce, ticket ledger is idempotent and rejects mutated args, traces redacted before export, negative test that <code>/etc/passwd</code> returns <code>permission_denied</code>. This is your security specialization made concrete.</li>
+  <li><strong>Honest failure reporting.</strong> The README states the 0% runs are a debugging baseline, not a result. That honesty is an asset in an interview — <em>if</em> it's followed by a fix.</li>
+</ul>
+
+<div class="box warn">
+  <h3>Blocking problem: the 0% task-success headline</h3>
+  <p>Right now the project's top-line metric is zero on every family, and the experiments have <strong>not been re-run</strong> since the wiring fixes (retrieval → classifier, deterministic classifier, configurable <code>docs_dir</code>). In an interview this is a liability you cannot talk your way around: "I compared topologies and shipped the fixed graph" invites "so did it actually answer anything?" — and today the answer is "no, and I haven't checked since fixing it."</p>
+  <p><strong>Priority 1, timeboxed to 3 days:</strong> re-run <code>held-out-v1</code> on <code>provider=minimax</code>. Success criterion: non-zero <code>task_success</code> on at least the <code>straightforward</code> and <code>missing_evidence</code> families, and <code>tool_correctness</code> off zero. Then the story becomes: "my eval harness caught my own wiring bugs before any human review did, I fixed them, and here are the dated numbers." That's a <em>good</em> story. The current one is unfinished.</p>
+</div>
+
+<h3>Other risks</h3>
+<ul>
+  <li><strong>Perpetual-polish risk.</strong> Phases 4–6 are all 🟡. An 8-week plan can become a 6-month plan if you keep completing phases. The project is already past "good enough to show." After the re-run, the marginal hour belongs to the demo video, the evidence card, and applications — not to a complete <code>experiments/topology-v1/</code> report.</li>
+  <li><strong>Single-artifact risk.</strong> Depth is good, but it's one project. Pair it with the dev-harness-kit (already in your vault notes) as artifact #2. <strong>Two is enough. Do not start a third.</strong></li>
+  <li><strong>Positioning precision.</strong> "Shipped the fixed graph on step-count / token usage, not on task success" is defensible only if you say the last four words out loud yourself, with a date, before the interviewer asks.</li>
+  <li><strong>MiniMax dependency.</strong> Fine as a cost choice, but have one sentence ready on why the <code>LLMAdapter</code> boundary means the provider is swappable and the graph code has no provider name in it (ADR-0003). That turns a "why this obscure model?" question into a design-decision answer.</li>
+</ul>
+
+<h2>5. Revised direction</h2>
+
+<table>
+  <tr><th>Priority</th><th>Target roles</th><th>Evidence you lead with</th></tr>
+  <tr><td>Primary</td><td>AI Engineer · Agent Engineer · Applied AI Engineer</td><td>AgentOpsPipeline: LangGraph orchestration, MCP integration, matched-budget eval, dated held-out numbers</td></tr>
+  <tr><td>Secondary</td><td>AI Platform / ML Platform Engineer · Python backend on AI systems</td><td>Same project, framed as the backend: Postgres, queue, checkpoint/resume, idempotency, OTel, Docker/CI</td></tr>
+  <tr><td>Specialization branch</td><td>AI Security Engineer · AppSec / security automation</td><td>Identity model, approval binding, injection &amp; scope tests, redacted tracing — separate résumé</td></tr>
+</table>
+
+<p><strong>The moat to keep sharpening</strong> (1 hr/day, because interviews test it and it's the part AI doesn't erode):</p>
+<ul>
+  <li>Distributed-systems basics: delivery semantics, idempotency, sagas/compensation, checkpoint/resume — you already implement these in AgentOps; be able to whiteboard them cold.</li>
+  <li>System design: rate limiting, queue backpressure, retry/DLQ, read/write path separation.</li>
+  <li>Postgres depth: transactions, isolation levels, indexing, <code>SELECT ... FOR UPDATE SKIP LOCKED</code> (job leasing).</li>
+  <li>Observability: traces vs. metrics vs. logs, span design, what you'd alert on.</li>
+</ul>
+
+<h2>6. The next three weeks</h2>
+
+<ol>
+  <li><strong>Days 1–3 — Re-run the experiments.</strong> <code>held-out-v1</code> on <code>minimax</code>, spend ceiling set from real rates. Record dated raw outcomes + uncertainty note. Non-zero on ≥2 families is the gate.</li>
+  <li><strong>Days 4–5 — Freeze the repo.</strong> No new phases. Write <code>EVIDENCE_CARD.md</code> with only published numbers and your personal contributions. Update the README résumé line with the real result.</li>
+  <li><strong>Days 6–7 — Demo + English pass.</strong> Record the 5-minute demo (issue → MCP calls → grounded answer → topology comparison → seeded regression). English polish on both project READMEs — most reviewers read the README first.</li>
+  <li><strong>Days 8–10 — Résumés.</strong> One AI/agent résumé (primary). One security résumé (branch). Both point at dated evidence, not the proposal.</li>
+  <li><strong>Day 11 onward — Apply.</strong> Target duties, not just titles: "AI agent," "applied AI," "Python AI backend," "ML platform," "AI security," "security automation." Batch of ~20 eligible applications before adjusting anything.</li>
+</ol>
+
+<div class="box">
+  <p><strong>After ~20 eligible applications, read the funnel:</strong> few screens → targeting/résumé problem; failed technical screens → fundamentals gap (the 1 hr/day moat work); weak project conversations → you're not telling the AgentOps failure-then-fix story well. This is a review checkpoint, not a statistical threshold.</p>
+</div>
+
+<h2>7. Failure modes to avoid</h2>
+<ul>
+  <li><strong>Concluding "fundamentals don't matter now."</strong> The opposite: AI raises what "knowing how to code" means to "can review, debug, and be accountable for code you didn't type."</li>
+  <li><strong>Chasing "prompt engineer" as a title.</strong> Not a durable role. Prompt work is one skill inside agent engineering, not a job.</li>
+  <li><strong>Assuming the AI-engineer ladder is easier.</strong> It usually asks for more (backend + ML + eval). Your edge is that AgentOps demonstrates all three — not that the bar is lower.</li>
+  <li><strong>Building project #3.</strong> Depth on two artifacts beats breadth on four. The bottleneck now is applications, not portfolio surface.</li>
+  <li><strong>Showing the project at 0%.</strong> Covered above — re-run first.</li>
+</ul>
+
+<h2>8. What to say in interviews</h2>
+
+<p><strong>One-liner:</strong> "I build the backend for AI agents — the part that makes them observable, testable, recoverable, and safe to operate under real tool-use and prompt-injection risk."</p>
+
+<p><strong>The AgentOps arc (90 seconds):</strong></p>
+<ol>
+  <li>"It's a support agent: repository issue in, grounded answer plus an approval-gated ticket draft out — and it refuses when the evidence doesn't support an answer."</li>
+  <li>"On top of the app I built an experiment workbench: matched-budget comparison of prompts and workflow topologies on a frozen, content-hashed held-out set, scored on five axes, not one number."</li>
+  <li>"My first held-out run scored zero — and the sub-metrics localized the fault: retrieval recall was 1.0, tool correctness was 0.0, so the agent was fetching the right evidence and then never issuing a correct tool call. The harness caught a wiring bug before any human review did."</li>
+  <li>"I fixed the wiring, re-ran, and [dated result]. I shipped the fixed graph as default — chosen on matched-budget step count and token usage, with task success at [X]."</li>
+  <li>"The safety model: identity comes from the JWT principal, never the model; approval binds user, run, tool, canonical args, and a one-use nonce; the ticket ledger is idempotent so a crash after dispatch can't double-publish."</li>
+</ol>
+
+<p class="verdict">Step 4 requires the re-run. Until it's done, you don't have this story — you have three-quarters of it.</p>
+
+<div class="foot">
+  Sources in vault: <code>topic/00-career-strategy.md</code>, <code>topic/09-career-comparison-and-evidence.md</code>,
+  <code>wiki/ai-agent-wiki/career-coaching/</code>, <code>sh-ai-x/AgentOpsPipeline</code> README (phases table + PROBLEM/ANALYSIS/ADVANCE section, read 2026-09-10).
+  Labor-market direction claims are qualitative judgments, not survey data. Eligibility caveats from the prior docs (degree requirement, work authorization for non-KR roles) still apply and are unchanged.
+</div>
+
+</main>
+</body>
+</html>
