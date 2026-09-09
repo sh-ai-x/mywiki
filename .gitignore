@@ -1,1 +1,8 @@
 proposals/
+
+# Agent tooling scratch state — not part of the knowledge base
+.dev-kit/
+**/.dev-kit/
+
+# Obsidian per-machine UI state
+.obsidian/workspace.json

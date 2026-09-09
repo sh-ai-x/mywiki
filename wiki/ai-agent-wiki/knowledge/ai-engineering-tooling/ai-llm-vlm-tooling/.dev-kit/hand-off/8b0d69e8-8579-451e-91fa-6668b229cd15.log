@@ -1,7 +1,0 @@
-Bash	cd "/Users/sanghee/dev/mywiki/wiki/ai-agent-wiki/ai-engineering-tooling/ai-llm-v
-Bash	echo "=== Surviving leaves ===" ; ls /Users/sanghee/dev/mywiki/wiki/ai-agent-wik
-Bash	f="/Users/sanghee/dev/mywiki/_research/junior-ai-engineer-career-2026.md"; echo 
-Bash	grep -n "^created:\|^updated:\|^status:\|^---" /Users/sanghee/dev/mywiki/_resear
-Bash	tail -10 /Users/sanghee/dev/mywiki/_research/junior-ai-engineer-career-2026.md
-Bash	grep -n "^## " /Users/sanghee/dev/mywiki/_research/junior-ai-engineer-career-202
-Bash	f="/Users/sanghee/dev/mywiki/_research/junior-ai-engineer-career-2026.md"; echo 

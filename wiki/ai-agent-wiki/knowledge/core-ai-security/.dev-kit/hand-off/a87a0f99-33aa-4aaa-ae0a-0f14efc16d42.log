@@ -1,8 +1,0 @@
-Bash	cd /Users/sanghee/dev/mywiki/wiki/ai-agent-wiki/core-ai-security && rmdir threat
-Bash	rm -f /tmp/fix-strix-paths.py; echo "cleaned"
-Bash	grep -E "^##|^# " /Users/sanghee/dev/mywiki/wiki/ai-agent-wiki/core-ai-security/
-Bash	echo "ai agent, rag, langchain, langraph, graphrag, etc for ai engineering" | tr
-Bash	ls -la /Users/sanghee/dev/mywiki/_research/ai-llm-vlm-tooling.md; echo "---"; he
-Bash	cat > /tmp/append-llmwiki.py << 'PYEOF' """Append LLM-Wiki deep-dive section to 
-Bash	grep -E "^## " /Users/sanghee/dev/mywiki/_research/ai-llm-vlm-tooling.md | head 
-Bash	cat > /tmp/promote-ai-tooling.py << 'PYEOF' """Promote ai-llm-vlm-tooling staged
