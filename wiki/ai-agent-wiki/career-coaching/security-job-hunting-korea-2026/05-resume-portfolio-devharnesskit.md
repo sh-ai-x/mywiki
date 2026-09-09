@@ -1,0 +1,105 @@
+---
+topic: security-job-hunting-korea-2026-§5-devharnesskit
+tags: ["career", "job-hunting", "security", "korea", "section", "portfolio", "dev-harness-kit", "owasp", "global-first", "junior", "interview-prep"]
+related: ["ai-agent-wiki/career-coaching/security-job-hunting-korea-2026/_index", "ai-agent-wiki/career-coaching", "ai-agent-wiki/core-ai-security/_index"]
+sources:
+  - https://github.com/sh-ai-x/dev-harness-kit
+created: 2026-09-10
+updated: 2026-09-10
+status: promoted
+parent: ai-agent-wiki/career-coaching/security-job-hunting-korea-2026
+section: §5
+global-first-filter: applied
+---
+
+# §5 Resume / Portfolio Positioning — The dev-harness-kit Angle
+
+This is the most important section of the dossier. The dev-harness-kit is the user's primary differentiator and must be positioned for the Korean security-recruiter audience.
+
+## §5 Resume / Portfolio Positioning — The dev-harness-kit Angle
+
+This is the most important section of the dossier. The dev-harness-kit is the user's primary differentiator and must be positioned for the Korean security-recruiter audience.
+
+### 5.1 What the dev-harness-kit actually is
+
+Per the GitHub repo:[^dhk-github]
+
+- **AI Native dev harness skill kit** — plugin marketplace for Claude Code and Codex
+- Workflow: `bootstrap → evidence-plan? → plan → build → review → ship`
+- Loop is **enforced by hooks**, not by model politeness
+- Modes: full / lite / undev / team
+- **Security scorecard** — deterministic 0–100 OWASP A01–A10 scoring
+- Codex/Claude parity — identical slash commands, identical behavior
+- 818 commits, MIT license
+- Architecture: `NO-DUP • NO-BOTTLENECK • NO-MEANINGLESS-LOOP • Human-on-the-Loop • Worktree-per-task`
+
+Key skills/commands in the marketplace:
+- `/dev-kit:security` — OWASP-style review skill (the headline security differentiator)
+- `/dev-kit:security-metrics` — deterministic 0–100 OWASP A01–A10 scorecard
+- `/dev-kit:review` — multi-dim code review (correctness, security, architecture)
+- `/dev-kit:bootstrap` — vault/repo setup with hardened defaults
+- `/dev-kit:inspect` — read-only codebase health scan
+- `/dev-kit:ci-setup` — CI workflow installation
+- TDD gates that block "done" claims without passing tests
+- Worktree-per-task rule enforced by `worktree-guard` hook
+
+### 5.2 Mapping dev-harness-kit features to Korean recruiter value props
+
+The user must translate the plugin's features into language Korean security recruiters care about. Mapping:
+
+| dev-harness-kit feature | Korean-recruiter translation | What it demonstrates |
+|---|---|---|
+| `/dev-kit:security` skill (OWASP-style review) | "보안 자동 검토 스킬 — OWASP Top 10 기반 정적 분석" | You can build security tooling, not just consume it. |
+| `security-metrics` (0–100 OWASP A01–A10 scorecard) | "OWASP A01–A10 카테고리별 결정론적 보안 점수 산출" | You can quantify security posture — the basis for GRC reporting. |
+| TDD gates that block insecure commits | "안전하지 않은 코드는 커밋 차단하는 가드레일" | Secure-by-default culture; the same mindset an enterprise AppSec team wants. |
+| `/dev-kit:review` multi-dim | "3축 코드 리뷰 (정합성·보안·아키텍처)" | You understand the review taxonomy that AppSec teams use. |
+| Worktree-per-task hook | "태스크 격리 — 동일 PR 내 다중 작업 혼선 차단" | You understand isolation as a security primitive. |
+| `/dev-kit:bootstrap` with hardened defaults | "신규 레포 즉시 보안 기본값 적용" | You can ship a security baseline; the trait every 신입 is expected to lack. |
+| Plugin marketplace architecture | "Claude Code/Codex 양대 CLI 모두 호환되는 플러그인 마켓플레이스" | You can ship a marketplace-grade product, not a toy. |
+| `NO-DUP / NO-BOTTLENECK / NO-MEANINGLESS-LOOP` principles | "설계 원칙을 코드로 강제 — '보안 정책은 문서가 아닌 실행 가능한 규칙'" | The exact mindset 한국 ISMS-P 컨설턴트가 가져야 할 것. |
+
+### 5.3 The "보안 도구 빌더" narrative
+
+Korean security recruiters separate candidates into two buckets:
+
+- **보안 사용자 (security consumer)**: knows how to run Burp, knows how to read logs.
+- **보안 도구 빌더 (security tool builder)**: knows how to write the tool Burp is built on.
+
+The dev-harness-kit positions the user firmly in the second bucket. The cover-letter hook (see §9) should make this explicit: "I built a security-tool marketplace, not just a portfolio of security-tool use."
+
+### 5.4 What to put in the resume — specific phrasing
+
+Resume "프로젝트" section, for each dev-harness-kit sub-feature:
+
+> **AI Native 보안 자동화 툴킷 (2024–2026)**
+> Claude Code / Codex 양대 CLI 환경에서 동작하는 플러그인 마켓플레이스 설계·구현.
+> - OWASP A01–A10 카테고리별 결정론적 보안 점수(0–100) 산출하는 정적 분석 엔진 개발
+> - 보안 정책 위반 시 커밋을 차단하는 pre-commit hook 가드레일 구현 (TDD 게이트 통합)
+> - 멀티 디멘션 코드 리뷰 자동화 (정합성·보안·아키텍처)
+> - MIT 라이선스 오픈소스 / 800+ 커밋
+> - GitHub: github.com/sh-ai-x/dev-harness-kit
+
+### 5.5 What to put in the portfolio README
+
+The GitHub README is recruiter-facing. The user should:
+
+- Keep the README tight — Korean recruiters spend ~30 seconds skimming.
+- Front-load the security story: include a "Security" section near the top.
+- Include an "OWASP coverage" badge or table mapping `security-metrics` output to OWASP A01–A10.
+- Link to a public security report generated by the tool (e.g., the scorecard of itself — `/dev-kit:security-metrics` on the dev-harness-kit repo).
+- Pin a sample `inspection-report.html` or `security-scorecard.md` so the recruiter can see the output without installing anything.
+
+### 5.6 Interview prep story — STAR-formatted
+
+Prepare a 2-minute STAR story:
+
+- **S**: Korean security market is moving to LLM-integrated SaaS, and traditional AppSec reviews don't cover LLM attack surface.
+- **T**: Built an OWASP-style review skill (A01–A10) that runs deterministically inside Claude Code and Codex, so any developer can run a security review in 60 seconds.
+- **A**: Designed 11 scoring dimensions; built the deterministic scorecard; TDD-gated the "done" claim so the scorecard only emits after a successful regression test.
+- **R**: 800+ commits, MIT-licensed, codex/parity verified. Security scorecard's coverage of OWASP A01–A10 matches what a 5-year AppSec engineer would produce.
+
+---
+
+## Source definitions (this section)
+
+- [^dhk-github]: sh-ai-x/dev-harness-kit GitHub repository. https://github.com/sh-ai-x/dev-harness-kit (accessed 2026-09-10)
